@@ -9,6 +9,10 @@ const db = require("./db");
 // set port number
 const port = process.env.PORT || 3000;
 
+// convert sting db to json
+// const json = JSON.stringify(db);
+// console.log(json);
+
 // make route for index
 app.get("/", (req, res) => {
   res.send("Hello World");
@@ -20,7 +24,7 @@ app.get("/api/users", (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      res.json(users);
+      res.json(JSON.stringify(users));
     }
   });
 });

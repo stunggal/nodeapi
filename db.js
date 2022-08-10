@@ -18,7 +18,19 @@ const userSchema = new Schema({
   updatedAt: { type: Date, default: Date.now },
 });
 
-// create a model for the db
+// make a schema for the mahasiswa
+const mahasiswaSchema = new Schema({
+  nim: String,
+  nama: String,
+  alamat: String,
+  jenis_kelamin: String,
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
+});
+
+
+// create a model for the db without schema
+
 const User = mongoose.model("User", userSchema);
 
 // insert a document into the db

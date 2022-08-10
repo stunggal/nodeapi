@@ -24,7 +24,7 @@ app.get("/api/users", (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      res.json(JSON.stringify(users));
+      res.json(users);
     }
   });
 });
